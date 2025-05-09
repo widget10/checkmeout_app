@@ -16,3 +16,8 @@ env/
 dist/
 build/
 *.egg-info/
+
+# SSH and security files
+.ssh/
+**/id_*
+**/.*_history
