@@ -16,12 +16,12 @@ function Checkout() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/checkout', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/checkout`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ skus: skus.toUpperCase() }), // Convert to uppercase before sending
+        body: JSON.stringify({ skus: skus.toUpperCase() }),
       });
       
       if (!response.ok) {
