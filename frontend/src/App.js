@@ -6,15 +6,18 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Checkout from './components/Checkout';
 
-const darkTheme = createTheme({
+const theme = createTheme({
   palette: {
+    primary: {
+      main: '#6aae20',
+    },
     mode: 'light',
   },
 });
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container>
         <Box 
@@ -35,11 +38,11 @@ function App() {
             gutterBottom
             sx={{
               fontWeight: 'bold',
-              color: 'primary.main',
+              color: '#6aae20',
               mb: 4
             }}
           >
-            Supermarket Checkout System
+            Agrichain Checkout System
           </Typography>
           <Checkout />
         </Box>
